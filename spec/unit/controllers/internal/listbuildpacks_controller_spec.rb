@@ -45,7 +45,7 @@ module VCAP::CloudController
     context 'with a set of buildpacks' do
       include TempFileCreator
 
-      let(:file) { temp_file_with_content }
+      let(:file) { temp_file_with_content.path }
 
       before do
         create_buildpack('third-buildpack', 3, file)
